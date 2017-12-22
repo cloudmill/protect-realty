@@ -74,8 +74,7 @@
 .is-icons--icon-4:before,
 .is-icons--icon-5:before,
 .is-icons--icon-6:before,
-.is-icons--open:before,
-.list--bullet > li::before {
+.is-icons--open:before {
   background-image: url("../images/svg/sprite.svg");
   -moz-background-size: 168.8125em 90.84937em;
   background-size: 168.8125em 90.84937em;
@@ -322,36 +321,6 @@
 
   100% {
     -webkit-transform: translateY(0%);
-  }
-}
-
-@-moz-keyframes Opacity {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes Opacity {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes Opacity {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
   }
 }
 
@@ -1692,56 +1661,70 @@ ol ol {
   padding-right: 5px;
 }
 
-.list--bullet {
+.list--bullet,
+.default-page ul {
   padding-left: 0;
   list-style: none;
   margin-left: 11px;
 }
 
-.list--bullet > li {
+.list--bullet > li,
+.default-page ul > li {
   margin-bottom: 8.84615px;
 }
 
-.list--bullet > li:last-child {
+.list--bullet > li:last-child,
+.default-page ul > li:last-child {
   margin-bottom: 0;
 }
 
-.list--bullet > li::before {
-  width: 125.0625em;
-  height: 89.66187em;
-  background-position: -33.4375em -0.625em;
+.list--bullet > li::before,
+.default-page ul > li::before {
+  content: '\e807';
+  font-family: "fontello";
+  display: inline-block;
   color: #3c4bac;
   margin-right: 11px;
+  margin-left: -13px;
+  font-size: 18px;
 }
 
-.list--number {
+.list--number,
+.default-page ol {
   counter-reset: items;
   padding-left: 0;
   margin-left: 11px;
 }
 
-.list--number > li {
+.list--number > li,
+.default-page ol > li {
   margin-bottom: 8.84615px;
 }
 
-.list--number > li::before {
+.list--number > li::before,
+.default-page ol > li::before {
   counter-increment: items 1;
   content: counter(items, decimal) ".";
   color: #3c4bac;
+  font-family: 'geometriaBold';
+  margin-right: 8px;
 }
 
-.list--number > li:last-child {
+.list--number > li:last-child,
+.default-page ol > li:last-child {
   margin-bottom: 0;
 }
 
-.blockquote {
+.blockquote,
+.default-page blockquote {
   padding: 60px 0 0;
   margin: 46px 0;
   font-size: 24px;
   position: relative;
 }
 
-.blockquote:before {
+.blockquote:before,
+.default-page blockquote:before {
   content: '';
   width: 68px;
   height: 47px;
@@ -1753,8 +1736,11 @@ ol ol {
 }
 
 .blockquote p:last-child,
+.default-page blockquote p:last-child,
 .blockquote ul:last-child,
-.blockquote ol:last-child {
+.default-page blockquote ul:last-child,
+.blockquote ol:last-child,
+.default-page blockquote ol:last-child {
   margin-bottom: 0;
 }
 
@@ -1762,6 +1748,43 @@ ol ol {
   margin-top: 10px;
   color: #3c4bac;
   font-size: 16px;
+}
+
+.default-page b {
+  font-family: 'geometriaBold';
+}
+
+.default-page i {
+  font-family: 'geometriaItalic';
+}
+
+.default-page a {
+  padding: 5px 0;
+  font-family: 'geometriaBold';
+  border-bottom: 2px solid transparent;
+  position: relative;
+}
+
+.default-page a::before {
+  content: '';
+  height: 2px;
+  width: 100%;
+  background-color: #3c4bac;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.default-page a:hover {
+  color: #3c4bac;
+}
+
+.default-page a:hover::before {
+  width: 0;
 }
 
 .container,
