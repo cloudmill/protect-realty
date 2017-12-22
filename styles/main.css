@@ -3173,7 +3173,7 @@ body {
 }
 
 .cr-bgimg div:nth-child(3) span {
-  background-position: -49.6vw center;
+  background-position: -49.5vw center;
 }
 
 .cr-bgimg div:nth-child(4) span {
@@ -3306,6 +3306,24 @@ body {
   opacity: 1;
   z-index: 10000;
   text-shadow: 0px 0px 1px #fff;
+}
+
+@media screen and (min-width: 1700px) {
+  .cr-bgimg div:nth-child(1) span {
+    background-position: 0px center;
+  }
+
+  .cr-bgimg div:nth-child(2) span {
+    background-position: -25vw center;
+  }
+
+  .cr-bgimg div:nth-child(3) span {
+    background-position: -50vw center;
+  }
+
+  .cr-bgimg div:nth-child(4) span {
+    background-position: -75vw center;
+  }
 }
 
 @media print {
