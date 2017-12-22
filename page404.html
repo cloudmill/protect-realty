@@ -42,7 +42,7 @@
         <div class="page-header-inner">
           <div class="page-header__logo"><a href="/"></a></div>
           <nav class="nav">
-            <div class="nav__toggle nav__toggle--js">Меню</div>
+            <div class="nav__toggle nav__toggle--js"><span>Меню</span><span>Закрыть</span></div>
               <ul class="main-nav">
                 <li class="main-nav__item"><a class="main-nav__link" href="#" title="Сделки с недвижимостью">Сделки с недвижимостью</a>
                 </li>
@@ -102,13 +102,14 @@
               <div class="active-form relative">
                 <div class="form__group">
                   <label class="label" for="email">
-                    <input class="control" type="email" name="email" id="email">
+                    <input class="control error has-value" type="email" name="email" id="email" required value="qwerty">
                     <div class="form__label">Ваш Email</div>
+                    <div class="has-error">Это поле заполнено неверно</div>
                   </label>
                 </div>
                 <div class="form__group">
                   <label class="label" for="txt">
-                    <textarea class="control" rows="2" name="txt" id="txt"></textarea>
+                    <textarea class="control" rows="3" name="txt" id="txt" required></textarea>
                     <div class="form__label">Описание ситуации</div>
                   </label>
                 </div>

@@ -48,12 +48,18 @@ $(document).ready(function () {
     $('.nav__toggle--js').click(function () {
         $('.page-header').toggleClass('active');
         $(this).toggleClass('active');
+        // if($(this).hasClass('active')) {
+        //   // $(this).removeClass('nonactive');
+        //   $(this).delay(1000, function() {
+        //      $(this).html('закрыть');
+        //  });
+        // } else {
+        //   $(this).delay(1000, function() {
+        //     $(this).html('меню');
+        //     console.log('asdasd');
+        //  });
+        // }
         $(this).next().slideToggle();
-        if ($(this).hasClass('active')) {
-            $(this).html('закрыть');
-        } else {
-            $(this).html('меню');
-        }
     });
 
     // select {select2}
@@ -95,16 +101,14 @@ $(document).ready(function () {
         e.preventDefault();
         $.magnificPopup.close();
     });
-    $('.popup-gallery').magnificPopup({
-        delegate: 'a',
-        type: 'image',
-        tLoading: 'Loading image #%curr%...',
-        mainClass: 'mfp-img-mobile',
-        gallery: {
-            enabled: true,
-            navigateByImgClick: true,
-            preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
-        }
+    $('.popup-gallery').each(function () {
+        $(this).magnificPopup({
+            delegate: 'a', // the selector for gallery item
+            type: 'image',
+            gallery: {
+                enabled: true
+            }
+        });
     });
     // popup
 });
