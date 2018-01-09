@@ -120,26 +120,6 @@
     transform: translateX(150%);
   }
 
-  50% {
-    -moz-transform: translateX(-8%);
-    transform: translateX(-8%);
-  }
-
-  65% {
-    -moz-transform: translateX(4%);
-    transform: translateX(4%);
-  }
-
-  80% {
-    -moz-transform: translateX(-4%);
-    transform: translateX(-4%);
-  }
-
-  95% {
-    -moz-transform: translateX(2%);
-    transform: translateX(2%);
-  }
-
   100% {
     -moz-transform: translateX(0%);
     transform: translateX(0%);
@@ -154,34 +134,6 @@
     transform: translateX(150%);
   }
 
-  50% {
-    -webkit-transform: translateX(-8%);
-    -moz-transform: translateX(-8%);
-    -o-transform: translateX(-8%);
-    transform: translateX(-8%);
-  }
-
-  65% {
-    -webkit-transform: translateX(4%);
-    -moz-transform: translateX(4%);
-    -o-transform: translateX(4%);
-    transform: translateX(4%);
-  }
-
-  80% {
-    -webkit-transform: translateX(-4%);
-    -moz-transform: translateX(-4%);
-    -o-transform: translateX(-4%);
-    transform: translateX(-4%);
-  }
-
-  95% {
-    -webkit-transform: translateX(2%);
-    -moz-transform: translateX(2%);
-    -o-transform: translateX(2%);
-    transform: translateX(2%);
-  }
-
   100% {
     -webkit-transform: translateX(0%);
     -moz-transform: translateX(0%);
@@ -193,22 +145,6 @@
 @-webkit-keyframes slideLeft {
   0% {
     -webkit-transform: translateX(150%);
-  }
-
-  50% {
-    -webkit-transform: translateX(-8%);
-  }
-
-  65% {
-    -webkit-transform: translateX(4%);
-  }
-
-  80% {
-    -webkit-transform: translateX(-4%);
-  }
-
-  95% {
-    -webkit-transform: translateX(2%);
   }
 
   100% {
@@ -235,26 +171,6 @@
     transform: translateY(100%);
   }
 
-  50% {
-    -moz-transform: translateY(-8%);
-    transform: translateY(-8%);
-  }
-
-  65% {
-    -moz-transform: translateY(4%);
-    transform: translateY(4%);
-  }
-
-  80% {
-    -moz-transform: translateY(-4%);
-    transform: translateY(-4%);
-  }
-
-  95% {
-    -moz-transform: translateY(2%);
-    transform: translateY(2%);
-  }
-
   100% {
     -moz-transform: translateY(0%);
     transform: translateY(0%);
@@ -269,34 +185,6 @@
     transform: translateY(100%);
   }
 
-  50% {
-    -webkit-transform: translateY(-8%);
-    -moz-transform: translateY(-8%);
-    -o-transform: translateY(-8%);
-    transform: translateY(-8%);
-  }
-
-  65% {
-    -webkit-transform: translateY(4%);
-    -moz-transform: translateY(4%);
-    -o-transform: translateY(4%);
-    transform: translateY(4%);
-  }
-
-  80% {
-    -webkit-transform: translateY(-4%);
-    -moz-transform: translateY(-4%);
-    -o-transform: translateY(-4%);
-    transform: translateY(-4%);
-  }
-
-  95% {
-    -webkit-transform: translateY(2%);
-    -moz-transform: translateY(2%);
-    -o-transform: translateY(2%);
-    transform: translateY(2%);
-  }
-
   100% {
     -webkit-transform: translateY(0%);
     -moz-transform: translateY(0%);
@@ -308,22 +196,6 @@
 @-webkit-keyframes slideUp {
   0% {
     -webkit-transform: translateY(100%);
-  }
-
-  50% {
-    -webkit-transform: translateY(-8%);
-  }
-
-  65% {
-    -webkit-transform: translateY(4%);
-  }
-
-  80% {
-    -webkit-transform: translateY(-4%);
-  }
-
-  95% {
-    -webkit-transform: translateY(2%);
   }
 
   100% {
@@ -964,7 +836,7 @@ a.link:hover::before {
 
 .btn--default {
   color: #fff;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.1);
   border: 2px solid rgba(255, 255, 255, 0.3);
   position: relative;
   margin-left: 70px;
@@ -3293,8 +3165,8 @@ body {
   margin: auto;
   height: 330px;
   z-index: -1;
-  color: transparent;
-  text-shadow: 0px 0px 10px #fff;
+  color: #fff;
+  /* text-shadow: 0px 0px 10px #fff; */
   -webkit-transition: text-shadow 0.8s ease-in-out, opacity 0.8s ease-in-out;
   -o-transition: text-shadow 0.8s ease-in-out, opacity 0.8s ease-in-out;
   -moz-transition: text-shadow 0.8s ease-in-out, opacity 0.8s ease-in-out;
@@ -3328,7 +3200,7 @@ body {
 
 .cr-container input:checked ~ .cr-titles h1 {
   opacity: 0;
-  text-shadow: 0px 0px 30px #fff;
+  /* text-shadow: 0px 0px 30px #fff; */
 }
 
 .cr-container input.cr-selector-img-1:checked ~ .cr-titles h1:nth-child(1),
@@ -3337,7 +3209,7 @@ body {
 .cr-container input.cr-selector-img-4:checked ~ .cr-titles h1:nth-child(4) {
   opacity: 1;
   z-index: 10000;
-  text-shadow: 0px 0px 1px #fff;
+  /* text-shadow: 0px 0px 1px #fff; */
 }
 
 @media screen and (min-width: 1700px) {
